@@ -21,10 +21,6 @@ provider "azurerm" {
   resource_provider_registrations = "none"
 }
 
-# Explicitly register required resource providers (recommended alternative to skip_provider_registration)
-resource "azurerm_resource_provider_registration" "example" {
-  name = "Microsoft.Resources"
-}
 resource "azurerm_resource_group" "rg" {
   name     = "813-dfe92732-hands-on-with-terraform-on-azure"
   location = "South Central US"
